@@ -1,4 +1,4 @@
-# app.py
+# config.py
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -12,6 +12,3 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 from routes import *  # Import routes after creating the app to avoid circular imports
-
-if __name__ == '__main__':
-    app.run(debug=True)
